@@ -1,6 +1,4 @@
-
 public class Pattern1 {
-
 	public static void main(String[] args) {
 		int s1, b, s2, r;
 		for(s1 = 1; s1<=11; s1++) {
