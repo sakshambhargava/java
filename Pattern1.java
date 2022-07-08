@@ -1,3 +1,4 @@
+// LOGIC
 // top left : (i + j <= n + 1)
 // top right : (j - i >= n - 1)
 // bottom left : (i - j >= n - 1)
