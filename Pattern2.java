@@ -1,27 +1,28 @@
+// LOGIC
+// top left : (i + j > n)
+// top right : (j - i < n)
+// bottom left : (i - j < n)
+// bottom right : (i + j - n < (2 * n)
 
 public class Pattern2 {
 
-	public static void main(String[] args) {
-		int s, b, r;
-		for(r = 1; r <= 5; r++) {
-			for(b = 1; b <= 6-r; b++) {
-				System.out.print(" ");
-			}
-			for(s =1; s <= 2*r-1; s++) {
-				System.out.print("*");
-			}
-			System.out.println();
-		}
-		for(r = 1; r <= 6; r++) {
-			for(b = 1; b <= r-1; b++) {
-				System.out.print(" ");
-			}
-			for(s = 1; s <= 13-2*r; s++) {
-				System.out.print("*");
-			}
-		System.out.println();	
-		}
+  private static int n = 6;
 
-	}
-
+  public static void main(String[] args) {
+    for (int i = 1; i < 2 * n; i++) {
+      for (int j = 1; j < 2 * n; j++) {
+        if (
+          (i + j > n) && 
+		  (j - i < n) && 
+		  (i - j < n) && 
+		  (i + j - n < (2 * n))
+        ) {
+          System.out.print("*");
+        } else {
+          System.out.print(" ");
+        }
+      }
+      System.out.println();
+    }
+  }
 }
